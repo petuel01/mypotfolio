@@ -1,0 +1,1125 @@
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background: #0f1214; /* slight contrast over --background */
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Make form controls and cards use the theme colors generally */
+input, textarea, select {
+  background: var(--background);
+  color: var(--text);
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+}
+
+/* Override common Tailwind-ish utility card backgrounds used in templates */
+.rounded-xl.bg-indigo-50,
+.rounded-lg.bg-indigo-50,
+.bg-indigo-50 {
+  background: var(--background) !important;
+  color: var(--text) !important;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.rounded-xl.bg-indigo-50 h2,
+.rounded-lg.bg-indigo-50 h2,
+.bg-indigo-50 h2 {
+  color: var(--primary) !important;
+}
+
+/* Ensure project cards use neutral backgrounds and respect theme */
+.project-card {
+  background: var(--background) !important;
+  color: var(--text) !important;
+  border: 1px solid rgba(0,0,0,0.06) !important;
+}
+
+.project-card .project-stack {
+  color: var(--secondary) !important;
+}
+
+/* Buttons: make them less jarring in dark mode by using semi-transparent accents */
+.project-cta a,
+.hero-cta a,
+.btn {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.hero-cta a:hover,
+.project-cta a:hover,
+.btn:hover {
+  background: rgba(124,58,237,0.06);
+  color: var(--text);
+}
+
+/* Project CTA small buttons (Code / Live) */
+.project-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  background: transparent;
+  transition: transform .12s, background .12s;
+  color: var(--text);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+.project-cta a .arrow { transition: transform .12s; }
+.project-cta a:hover { transform: translateX(3px); background: rgba(124,58,237,0.06); color: var(--text); }
+.project-cta a.project-code { border-color: rgba(0,0,0,0.08); }
+.project-cta a.project-live { border-color: var(--secondary); }
+
+/* --- Identa-inspired Modern Portfolio Styles --- */
+html {
+  scroll-behavior: smooth;
+}
+/* removed translucent overlay to keep colors uniform across light/dark themes */
+
+/* Navbar */
+.custom-navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.97);
+  box-shadow: 0 2px 8px rgba(30,58,138,0.06);
+  z-index: 100;
+  border-bottom: 1px solid #e5e7eb;
+}
+/* Mobile menu (theme-aware): ensure a solid background so links don't overlap page content */
+#mobileMenu {
+  /* use CSS variable so both light and dark themes are supported */
+  background: var(--background) !important;
+  color: var(--text) !important;
+  border-top: 1px solid rgba(0,0,0,0.06) !important;
+  box-shadow: 0 8px 24px rgba(2,6,23,0.08);
+  z-index: 9999;
+  /* make the mobile menu an overlay that covers full width and a comfortable height */
+  position: fixed !important;
+  left: 0;
+  right: 0;
+  top: 64px; /* sit below the header */
+  bottom: 0; /* fill to bottom of viewport */
+  padding: 1.25rem !important;
+  border-radius: 0 !important;
+  /* allow scrolling inside the menu if content is long */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#mobileMenu a {
+  display: block;
+  color: var(--text) !important;
+  padding: 0.5rem 0;
+  text-decoration: none;
+}
+
+/* In dark theme make sure borders and shadows are appropriate */
+[data-theme="dark"] #mobileMenu {
+  background: var(--background) !important; /* #1e232b */
+  border-top-color: rgba(255,255,255,0.06) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+}
+
+[data-theme="dark"] #mobileMenu a {
+  color: var(--text) !important;
+}
+
+.mobile-close {
+  background: transparent;
+  color: var(--text);
+  border: 0;
+  font-size: 1.6rem;
+  line-height: 1;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  cursor: pointer;
+  padding: 6px 10px;
+}
+.mobile-close:focus { outline: 2px solid rgba(124,58,237,0.18); border-radius: 6px; }
+
+/* Ensure mobile menu uses solid background matching theme */
+#mobileMenu {
+  background: var(--background) !important;
+  color: var(--text) !important;
+}
+
+[data-theme="light"] #mobileMenu {
+  background: #ffffff !important;
+}
+
+[data-theme="dark"] #mobileMenu {
+  background: var(--background) !important; /* #1e232b */
+}
+.mobile-close {
+  background: transparent;
+  color: var(--text);
+  border: 0;
+  font-size: 1.6rem;
+  line-height: 1;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  cursor: pointer;
+  padding: 6px 10px;
+}
+.mobile-close:focus { outline: 2px solid rgba(124,58,237,0.18); border-radius: 6px; }
+.custom-navbar nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1.5rem;
+}
+.logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #232263;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+/* old .nav-toggle / .nav-menu rules removed (using Tailwind-based header now) */
+@keyframes slideDownNav {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Hero Section */
+.hero-banner {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #f7f8fd 0%, #f3f4fa 100%);
+  padding: 0 1.5rem;
+  text-align: center;
+}
+.hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 2rem 1rem;
+}
+.hero-content img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 4px 24px rgba(108,71,230,0.08);
+  border: 4px solid #ecebfa;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #232263;
+  margin-bottom: 0.7rem;
+}
+.hero-content h1 span {
+  color: #6c47e6;
+}
+.hero-content h2 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.hero-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2.2rem;
+  border-radius: 0.7rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: #232263;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(30,58,138,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.hero-cta a.btn-green {
+  background: #22c55e;
+}
+.hero-cta a.btn-yellow {
+  background: #f59e42;
+}
+.hero-cta a:hover {
+  background: #6c47e6;
+  color: #fff;
+}
+@media (min-width: 600px) {
+  .hero-cta {
+    flex-direction: row;
+  }
+}
+/* Footer */
+.custom-footer {
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 4rem;
+  padding: 3rem 0 2rem 0;
+}
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2.5rem;
+  padding: 0 1.5rem;
+}
+@media (min-width: 700px) {
+  .footer-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.footer-col h3, .footer-col h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #232263;
+  margin-bottom: 0.7rem;
+}
+.footer-quote {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+.footer-copy {
+  color: #a1a1aa;
+  font-size: 0.95rem;
+  margin-top: 1.2rem;
+}
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-col ul li {
+  margin-bottom: 0.5rem;
+}
+.footer-col ul li a {
+  color: #232263;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-col ul li a:hover {
+  color: #6c47e6;
+}
+.footer-social {
+  display: flex;
+  gap: 1.1rem;
+  margin-top: 0.7rem;
+}
+.footer-social a {
+  color: #232263;
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+
+/* Active nav link underline used by JS */
+.active-link {
+  color: #7c3aed !important; /* purple-600 */
+  position: relative;
+}
+.active-link::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -6px;
+  height: 2px; background: #7c3aed; border-radius:2px;
+}
+
+/* Project card helpers (dark purple theme tweaks) */
+.project-card { border: 1px solid #2b2738; }
+.project-card:hover { box-shadow: 0 0 18px rgba(124,58,237,0.12); }
+.project-stack { color: #a78bfa; }
+.project-cta .btn-fuchsia { border-color: #d946ef; }
+.project-cta .btn-green { border-color: #34d399; }
+.footer-social a:hover {
+  color: #6c47e6;
+}
+/* =====================
+   PETZEUSTECH THEME
+   ===================== */
+:root {
+  --primary: #1e3a8a;
+  --secondary: #f59e42;
+  --background: #f8fafc;
+  --text: #22223b;
+  --header-font: 'Poppins', 'Raleway', 'Playfair Display', sans-serif;
+  --body-font: 'Open Sans', 'Inter', 'Roboto', sans-serif;
+}
+[data-theme="dark"] {
+  --primary: #f59e42;
+  --secondary: #1e3a8a;
+  --background: #1e232b; /* uniform dark color requested */
+  --text: #f8fafc;
+}
+
+/* Hero highlight: use primary color in light mode, white in dark mode */
+.hero-highlight {
+  color: var(--primary);
+}
+[data-theme="dark"] .hero-highlight {
+  color: #ffffff !important;
+}
+
+/* Make the small leading text white in dark mode */
+.hero-iam {
+  color: var(--text);
+  font-weight: 600;
+}
+[data-theme="dark"] .hero-iam {
+  color: #a78bfa !important; /* purple accent in dark mode */
+}
+/* Strong dark-mode overrides to make the site uniformly dark (requested uniform color) */
+[data-theme="dark"] body,
+[data-theme="dark"] header,
+[data-theme="dark"] .custom-navbar,
+[data-theme="dark"] .hero-banner,
+[data-theme="dark"] .hero-content,
+[data-theme="dark"] .hero-cta a,
+[data-theme="dark"] .project-card,
+[data-theme="dark"] #projects,
+[data-theme="dark"] .project-cta a,
+[data-theme="dark"] .footer-col,
+[data-theme="dark"] footer,
+[data-theme="dark"] nav,
+[data-theme="dark"] .nav-links li a,
+[data-theme="dark"] .mobile-menu,
+[data-theme="dark"] .project-thumb img {
+  background: var(--background) !important;
+  color: var(--text) !important;
+  border-color: rgba(255,255,255,0.04) !important;
+}
+
+[data-theme="dark"] a,
+[data-theme="dark"] .btn,
+[data-theme="dark"] .project-cta a,
+[data-theme="dark"] .hero-cta a {
+  color: var(--text) !important;
+  background: var(--background) !important;
+}
+
+/* Ensure small icons, toggles and thin strokes are readable in dark mode */
+[data-theme="dark"] #themeIcon,
+[data-theme="dark"] #menuBtn i,
+[data-theme="dark"] .hamburger span,
+[data-theme="dark"] .nav-links li a,
+[data-theme="dark"] .mobile-menu a,
+[data-theme="dark"] .custom-navbar .logo,
+[data-theme="dark"] aside a,
+[data-theme="dark"] .footer-social a,
+[data-theme="dark"] .project-cta a .arrow {
+  color: var(--text) !important;
+}
+
+[data-theme="dark"] .hamburger span {
+  background: var(--text) !important;
+}
+
+/* Make input/textarea placeholders visible in dark mode */
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder,
+[data-theme="dark"] select::placeholder {
+  color: rgba(248,250,252,0.7) !important; /* light, slightly transparent */
+}
+
+/* Stronger border contrast for some thin elements in dark mode */
+[data-theme="dark"] header,
+[data-theme="dark"] .custom-navbar,
+[data-theme="dark"] .project-card,
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  border-color: rgba(255,255,255,0.06) !important;
+}
+
+/* Make accent underlines still visible but subtle */
+[data-theme="dark"] .active-link {
+  color: #a78bfa !important;
+}
+/* Make header logo text and tile clearly white in dark mode */
+[data-theme="dark"] header > div:first-child,
+[data-theme="dark"] header > div:first-child * {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] header > div:first-child .w-7.h-7 {
+  border-color: rgba(255,255,255,0.14) !important;
+  background: transparent !important;
+  color: #ffffff !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--body-font);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  /* Force header background to theme value even when Tailwind utility classes (e.g. bg-transparent) are present */
+  background: var(--background) !important;
+  box-shadow: 0 2px 8px rgba(30,58,138,0.05);
+  z-index: 1000;
+  transition: background 0.3s;
+}
+/* Ensure header variants using Tailwind utilities (like bg-transparent) still show the theme background
+   so child elements (the mobile popup menu) can inherit an opaque background. */
+header.bg-transparent,
+header[class*="bg-"] {
+  background: var(--background) !important;
+}
+
+/* Make the mobile popup menu inherit header's background (so it will be opaque)
+   and sit above content. This avoids fighting utility classes on the element itself. */
+header #mobileMenu {
+  /* Make the mobile menu overlap the header and cover the viewport */
+  background: inherit !important;
+  color: inherit !important;
+  border-top: 0 !important;
+  box-shadow: 0 18px 60px rgba(2,6,23,0.18) !important;
+  position: fixed !important; /* overlap header */
+  top: 0 !important; /* start at very top so it overlaps */
+  left: 0 !important;
+  right: 0 !important;
+  height: 100vh !important; /* full viewport */
+  z-index: 1100 !important;
+  padding: 0.75rem !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* Reduce vertical spacing for links inside the overlay so it feels compact */
+header #mobileMenu a {
+  display: block;
+  color: var(--text) !important;
+  padding: 0.35rem 0 !important; /* tighter vertical rhythm */
+  margin: 0 !important;
+  text-decoration: none !important;
+  font-weight: 600;
+}
+
+/* Nudge the close button so it sits neatly in the corner without extra padding */
+header #mobileMenu .mobile-close {
+  top: 6px !important;
+  right: 8px !important;
+  padding: 4px 8px !important;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.brand {
+  font-family: var(--header-font);
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary);
+  letter-spacing: 2px;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-family: var(--body-font);
+  transition: color 0.2s;
+}
+.nav-links li a:hover {
+  color: var(--primary);
+}
+.theme-switcher-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+#theme-label {
+  font-size: 1rem;
+  color: var(--text);
+  font-family: var(--body-font);
+  font-weight: 600;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--secondary);
+  transition: .4s;
+  border-radius: 24px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background: #fff;
+  transition: .4s;
+  border-radius: 50%;
+}
+.switch input:checked + .slider {
+  background: var(--primary);
+}
+.switch input:checked + .slider:before {
+  transform: translateX(20px);
+}
+.slider.round {
+  border-radius: 24px;
+}
+/* ======= PROJECTS CAROUSEL ======= */
+.projects-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0 3rem 0;
+  position: relative;
+}
+.carousel-btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+  z-index: 2;
+}
+.carousel-btn:hover {
+  background: var(--secondary);
+  color: var(--primary);
+  transform: scale(1.1);
+}
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 900px;
+  padding: 1rem 0;
+}
+.project-card {
+  min-width: 300px;
+  max-width: 320px;
+  background: var(--background);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(30,58,138,0.10);
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.project-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(30,58,138,0.18);
+}
+.project-thumb img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* Skill thumbnail area: visually matches project thumbnails */
+.skill-thumb {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--background) 90%, black 4%);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+[data-theme="dark"] .skill-thumb {
+  background: rgba(255,255,255,0.02) !important;
+  border-bottom-color: rgba(255,255,255,0.04) !important;
+}
+.project-info h2 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0.2rem 0;
+  color: var(--primary);
+}
+.project-tech {
+  font-size: 0.95rem;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+/* Ensure projects section inherits theme colors */
+#projects {
+  background: var(--background);
+  color: var(--text);
+}
+.project-card img {
+  background: var(--background);
+}
+.project-card .project-stack {
+  color: var(--secondary);
+}
+.project-card .project-cta a {
+  color: var(--text);
+  border-color: var(--secondary);
+}
+.project-links a {
+  color: var(--primary);
+  font-weight: 600;
+  margin-right: 1rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.project-links a:hover {
+  color: var(--secondary);
+}
+@media (max-width: 700px) {
+  .carousel-track {
+    gap: 1rem;
+    max-width: 95vw;
+  }
+  .project-card {
+    min-width: 90vw;
+    max-width: 95vw;
+  }
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 2px;
+  display: block;
+}
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background: var(--background) !important;
+    flex-direction: column;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(30,58,138,0.08);
+    padding: 1rem 0;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* ====== Skills & Expertise compact template (responsive + theme-aware) ====== */
+.skills-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+.skills-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary);
+  display: inline-block;
+  padding-bottom: 6px;
+  margin-bottom: 18px;
+  border-bottom: 2px solid var(--secondary);
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+.skill-card {
+  /* Make skill cards visually match project cards */
+  background: var(--background) !important;
+  color: var(--text) !important;
+  border: 1px solid rgba(0,0,0,0.06) !important;
+  border-radius: 12px !important;
+  padding: 1rem !important;
+  box-shadow: 0 2px 12px rgba(30,58,138,0.06);
+}
+.skill-card h3 {
+  font-size: 1rem;
+  color: var(--secondary);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+}
+.skill-card ul { list-style: none; padding:0; margin:0; }
+.skill-card li { margin: 6px 0; font-size: 0.95rem; }
+.skill-card li::before { content: '→ '; color: var(--primary); }
+
+/* Dark mode tweaks */
+[data-theme="dark"] .skill-card {
+  background: rgba(255,255,255,0.02) !important;
+  border-color: rgba(255,255,255,0.04) !important;
+}
+[data-theme="dark"] .skills-title { color: var(--text) !important; border-bottom-color: rgba(167,139,250,0.7) !important; }
+[data-theme="dark"] .skill-card h3 { color: var(--primary) !important; border-bottom-color: rgba(255,255,255,0.04) !important; }
+
+/* Ensure card links aren't underlined by default and inherit color */
+.project-card h3 a,
+.skill-card h3 a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* Keep hover underline as a subtle affordance for links */
+.project-card h3 a:hover,
+.skill-card h3 a:hover {
+  text-decoration: underline !important;
+}
+
+/* Small utility spacing for home insertion */
+.section-gap { margin-top: 2.5rem; margin-bottom: 2.5rem; }
+
+/* Ensure the mobile dropdown (id #mobileMenu and utility-based navs) uses theme colors */
+#mobileMenu,
+.mobile-menu,
+.nav-links.active,
+.nav-links[aria-hidden="false"] {
+  background: var(--background) !important;
+  color: var(--text) !important;
+  border-color: rgba(0,0,0,0.06) !important;
+}
+
+#mobileMenu a,
+.mobile-menu a,
+.nav-links.active a {
+  color: var(--text) !important;
+}
+
+/* Dark-mode stronger contrast for mobile menu borders */
+[data-theme="dark"] #mobileMenu,
+[data-theme="dark"] .mobile-menu,
+[data-theme="dark"] .nav-links.active {
+  border-color: rgba(255,255,255,0.06) !important;
+}
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(120deg, var(--primary) 0%, var(--secondary) 100%);
+  color: #fff;
+  text-align: center;
+  padding-top: 64px;
+}
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+  opacity: 0.2;
+}
+
+/* Slightly smaller hero image and rounded bottom corners */
+.hero-img-bottom-rounded {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  max-width: 420px;
+  width: 80%;
+}
+
+@media (min-width: 768px) {
+  .hero-img-bottom-rounded { width: 66%; max-width: 520px; }
+}
+
+/* Profile image: make bottom-left and bottom-right corners pill-shaped */
+.profile-bottom-pill {
+  border-bottom-left-radius: 50% !important;
+  border-bottom-right-radius: 50% !important;
+  /* keep top corners small to preserve portrait look */
+  border-top-left-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+}
+
+/* Work badge below profile image (theme-aware) */
+.work-badge {
+  background: rgba(42,48,60,0.95); /* default dark-ish */
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+[data-theme="light"] .work-badge {
+  background: #f3f4f6; /* light grey */
+  color: var(--text);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+[data-theme="dark"] .work-badge {
+  background: rgba(42,48,60,0.95);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Ensure the badge sits directly under the profile image on all sizes */
+.work-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .work-badge { margin-top: 1rem; }
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 1.5rem auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid var(--secondary);
+  box-shadow: 0 4px 24px rgba(30,58,138,0.15);
+  transition: transform 0.3s;
+}
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile-pic:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+.hero h1 {
+  font-family: var(--header-font);
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
+.hero h1 span {
+  color: var(--secondary);
+}
+.typing-text {
+  font-size: 1.3rem;
+  font-family: var(--body-font);
+  min-height: 2.2em;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.8em 2em;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-family: var(--body-font);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(30,58,138,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+.btn:hover {
+  background: var(--secondary);
+  color: var(--primary);
+}
+.btn-whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+.btn-whatsapp:hover {
+  background: #128c7e;
+  color: #fff;
+}
+/* ======= FOOTER ======= */
+.footer-bg {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  color: #fff;
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
+  box-shadow: 0 -2px 16px rgba(30,58,138,0.10);
+  border-top: 4px solid var(--secondary);
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.footer-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.footer-brand-col {
+  flex: 1 1 220px;
+  min-width: 180px;
+}
+.footer-brand {
+  font-family: var(--header-font);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+.footer-quote {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #f8fafc;
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 2rem;
+  flex: 1 1 180px;
+  min-width: 140px;
+}
+.footer-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: var(--body-font);
+  transition: color 0.2s;
+  font-size: 1rem;
+}
+.footer-links li a:hover {
+  color: var(--secondary);
+}
+.footer-social {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  flex: 1 1 180px;
+  min-width: 140px;
+  justify-content: flex-end;
+}
+.footer-social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(30,58,138,0.10);
+}
+.footer-social-icon img {
+  width: 24px;
+  height: 24px;
+}
+.footer-social-icon.whatsapp:hover {
+  background: #25d366;
+  transform: scale(1.1);
+}
+.footer-social-icon.linkedin:hover {
+  background: #0077b5;
+  transform: scale(1.1);
+}
+.footer-social-icon.facebook:hover {
+  background: #1877f3;
+  transform: scale(1.1);
+}
+.footer-social-icon.github:hover {
+  background: #22223b;
+  transform: scale(1.1);
+}
+.footer-copy {
+  text-align: center;
+  color: #e0e7ef;
+  font-size: 0.98rem;
+  margin-top: 1.5rem;
+  opacity: 0.85;
+}
+@media (max-width: 900px) {
+  .footer-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .footer-links, .footer-social, .footer-brand-col {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    min-width: unset;
+  }
+  .footer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}

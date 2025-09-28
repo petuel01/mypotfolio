@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills | PETZEUSTECH</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Navbar -->
+  <header class="flex items-center justify-between px-6 py-4 border-b border-gray-200 relative bg-transparent">
+    <div class="flex items-center gap-2 font-bold text-gray-900">
+      <div class="w-7 h-7 border-2 border-purple-500 flex items-center justify-center text-purple-500 text-xs">P</div>
+      PETZEUSTECH
+    </div>
+
+    <nav class="hidden md:flex gap-6 text-sm items-center text-gray-700">
+      <a href="index.html" class="relative text-purple-600 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-purple-600 after:transition-all hover:after:w-full">#home</a>
+  <a href="projects.html" class="relative hover:text-purple-600 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-purple-600 after:transition-all hover:after:w-full">#projects</a>
+  <a href="skills.html" class="relative text-purple-600 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-purple-600 after:transition-all hover:after:w-full">#skills</a>
+  <a href="about.html" class="relative hover:text-purple-600 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-purple-600 after:transition-all hover:after:w-full">#about-me</a>
+  <a href="services.html" class="relative hover:text-purple-600 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-purple-600 after:transition-all hover:after:w-full">#services</a>
+    <a href="contact.html" class="relative hover:text-purple-600 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-purple-600 after:transition-all hover:after:w-full">#contacts</a>
+      
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <button id="themeBtn" class="text-gray-700 focus:outline-none" title="Toggle theme">
+        <i id="themeIcon" class="fas fa-moon"></i>
+      </button>
+      <button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <nav id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-white border-t border-gray-200 flex-col gap-4 px-6 py-4 md:hidden">
+      <a href="index.html" class="hover:text-purple-600">#home</a>
+      <a href="projects.html" class="hover:text-purple-600">#projects</a>
+      <a href="skills.html" class="text-purple-600">#skills</a>
+      <a href="about.html" class="hover:text-purple-600">#about-me</a>
+      <a href="services.html" class="hover:text-purple-600">#services</a>
+        <a href="contact.html" class="hover:text-purple-600">#contacts</a>
+      
+    </nav>
+  </header>
+
+  <!-- Skills & Expertise (polished template) -->
+  <section id="skills" class="skills-container section-gap">
+    <h2 class="skills-title">Skills & Expertise</h2>
+    <div class="skills-grid">
+      <div id="frontend" class="skill-card">
+        <h3>Frontend</h3>
+        <ul>
+          <li>HTML, CSS, JavaScript, Bootstrap</li>
+          <li>React (learning)</li>
+        </ul>
+      </div>
+
+      <div id="backend" class="skill-card">
+        <h3>Backend</h3>
+        <ul>
+          <li>PHP, Laravel, MySQL</li>
+        </ul>
+      </div>
+
+      <div id="devops-hosting" class="skill-card">
+        <h3>DevOps & Hosting</h3>
+        <ul>
+          <li>Bash Shell Scripting, Jenkins, Maven, Tomcat</li>
+          <li>Nginx, Ubuntu, VPS, aaPanel, Certbot</li>
+        </ul>
+      </div>
+
+      <div id="automation-bots" class="skill-card">
+        <h3>Automation & Bots</h3>
+        <ul>
+          <li>WhatsApp Bots (Node.js), Prompt Engineering</li>
+          <li>CI/CD, Automation, Scripting</li>
+        </ul>
+      </div>
+
+      <div id="mobile-iot" class="skill-card">
+        <h3>Mobile & IoT</h3>
+        <ul>
+          <li>Android Studio (Java/Kotlin), Flutter, Firebase</li>
+          <li>Smart Agriculture IoT, Automation</li>
+        </ul>
+      </div>
+
+      <div id="cms-seo" class="skill-card">
+        <h3>CMS & SEO</h3>
+        <ul>
+          <li>WordPress, SEO, Blogging</li>
+          <li>Hosting Automation</li>
+        </ul>
+      </div>
+
+      <div id="graphics" class="skill-card">
+        <h3>Graphics</h3>
+        <ul>
+          <li>Photoshop, Canva</li>
+        </ul>
+      </div>
+
+      <div id="electronics" class="skill-card">
+        <h3>Electronics</h3>
+        <ul>
+          <li>Phone & Laptop Repairs, Flashing, OS Install</li>
+        </ul>
+      </div>
+
+      <div id="soft-skills" class="skill-card">
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Teaching, Teamwork, Communication</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 mt-16">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8 text-sm text-gray-600">
+      <div>
+        <div class="text-xl font-bold text-indigo-900 mb-2 flex items-center gap-2"><i class="fa-solid fa-bolt text-indigo-700"></i> PETZEUSTECH</div>
+        <div class="mb-4 text-gray-500">“PETZEUSTECH – Using Tech to Solve Problems and Build Wealth”</div>
+      </div>
+      <div>
+        <div class="font-semibold mb-2 text-indigo-900">Links</div>
+        <ul class="space-y-1">
+          <li><a href="index.html" class="hover:text-indigo-700">Home</a></li>
+          <li><a href="about.html" class="hover:text-indigo-700">About</a></li>
+          <li><a href="skills.html" class="hover:text-indigo-700">Skills</a></li>
+          <li><a href="projects.html" class="hover:text-indigo-700">Projects</a></li>
+          <li><a href="services.html" class="hover:text-indigo-700">Services</a></li>
+          <li><a href="tutorials.html" class="hover:text-indigo-700">Tutorials</a></li>
+          <li><a href="contact.html" class="hover:text-indigo-700">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold mb-2 text-indigo-900">Contact</div>
+        <ul class="space-y-1">
+          <li><a href="mailto:baifempetuel0.2@gmail.com" class="hover:text-indigo-700"><i class="fa-solid fa-envelope mr-2"></i>Email</a></li>
+          <li><a href="tel:+237677251088" class="hover:text-indigo-700"><i class="fa-solid fa-phone mr-2"></i>+237 677 251 088</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold mb-2 text-indigo-900">Follow</div>
+        <div class="flex gap-4 mt-2">
+          <a href="https://wa.me/237677251088" target="_blank" rel="noopener noreferrer" title="WhatsApp" aria-label="WhatsApp" class="hover:text-green-500 text-2xl"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://web.facebook.com/baifem.petzeuskahlifa" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook" class="hover:text-blue-600 text-2xl"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://github.com/petuel01" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="hover:text-gray-800 text-2xl"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <div class="text-xs text-gray-400 mt-4">&copy; 2025 Baifem Petuel Diang. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Theme + Mobile menu behavior handled centrally in assets/js/script.js -->
+</body>
+</html>

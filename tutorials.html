@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorials | PETZEUSTECH</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Navbar -->
+  <header class="flex items-center justify-between px-6 py-4 border-b border-gray-200 relative bg-transparent">
+    <div class="flex items-center gap-2 font-bold text-gray-900">
+      <div class="w-7 h-7 border-2 border-purple-500 flex items-center justify-center text-purple-500 text-xs">B</div>
+      Baifem Petuel
+        PETZEUSTECH
+
+    <nav class="hidden md:flex gap-6 text-sm items-center text-gray-700">
+      <a href="index.html" class="relative text-purple-600 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-purple-600 after:transition-all hover:after:w-full">#home</a>
+  <a href="projects.html" class="relative hover:text-purple-600 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-purple-600 after:transition-all hover:after:w-full">#projects</a>
+  <a href="skills.html" class="relative hover:text-purple-600 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-purple-600 after:transition-all hover:after:w-full">#skills</a>
+  <a href="about.html" class="relative hover:text-purple-600 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-purple-600 after:transition-all hover:after:w-full">#about-me</a>
+  <a href="services.html" class="relative hover:text-purple-600 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-purple-600 after:transition-all hover:after:w-full">#services</a>
+    <a href="contact.html" class="relative hover:text-purple-600 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-purple-600 after:transition-all hover:after:w-full">#contacts</a>
+      
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <button id="themeBtn" class="text-gray-700 focus:outline-none" title="Toggle theme">
+        <i id="themeIcon" class="fas fa-moon"></i>
+      </button>
+      <button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <nav id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-white border-t border-gray-200 flex-col gap-4 px-6 py-4 md:hidden">
+      <a href="index.html" class="hover:text-purple-600">#home</a>
+      <a href="projects.html" class="hover:text-purple-600">#projects</a>
+      <a href="skills.html" class="hover:text-purple-600">#skills</a>
+      <a href="about.html" class="hover:text-purple-600">#about-me</a>
+      <a href="services.html" class="hover:text-purple-600">#services</a>
+        <a href="contact.html" class="hover:text-purple-600">#contacts</a>
+      
+    </nav>
+  </header>
+
+  <!-- Tutorials Section -->
+  <section class="max-w-7xl mx-auto px-4 py-16">
+    <h1 class="text-3xl md:text-4xl font-extrabold text-indigo-900 mb-8 text-center js-fade-up">Tech Tutorials & Guides</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 js-fade-up">
+      <!-- VPS Hosting -->
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col gap-4 border border-gray-100 hover:shadow-lg transition">
+        <div class="flex items-center gap-3 text-indigo-700 text-2xl">
+          <i class="fa-solid fa-server"></i>
+          <span class="font-bold text-lg">VPS Hosting</span>
+        </div>
+        <div class="text-gray-600">Step-by-step guides on setting up, securing, and managing Virtual Private Servers for web hosting, apps, and more.</div>
+      </div>
+      <!-- WordPress -->
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col gap-4 border border-gray-100 hover:shadow-lg transition">
+        <div class="flex items-center gap-3 text-blue-600 text-2xl">
+          <i class="fa-brands fa-wordpress"></i>
+          <span class="font-bold text-lg">WordPress</span>
+        </div>
+        <div class="text-gray-600">Learn to build, customize, and secure WordPress sites, including themes, plugins, and SEO best practices.</div>
+      </div>
+      <!-- SEO -->
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col gap-4 border border-gray-100 hover:shadow-lg transition">
+        <div class="flex items-center gap-3 text-green-600 text-2xl">
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+          <span class="font-bold text-lg">SEO</span>
+        </div>
+        <div class="text-gray-600">Comprehensive SEO tutorials: on-page, off-page, technical SEO, and tools to boost your website's ranking.</div>
+      </div>
+      <!-- HTML, CSS & JS -->
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col gap-4 border border-gray-100 hover:shadow-lg transition">
+        <div class="flex items-center gap-3 text-yellow-500 text-2xl">
+          <i class="fa-brands fa-html5"></i>
+          <i class="fa-brands fa-css3-alt"></i>
+          <i class="fa-brands fa-js"></i>
+          <span class="font-bold text-lg">HTML, CSS & JS</span>
+        </div>
+        <div class="text-gray-600">Fundamentals and advanced tips for building modern, responsive websites with HTML, CSS, and JavaScript.</div>
+      </div>
+      <!-- PHP -->
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col gap-4 border border-gray-100 hover:shadow-lg transition">
+        <div class="flex items-center gap-3 text-purple-600 text-2xl">
+          <i class="fa-brands fa-php"></i>
+          <span class="font-bold text-lg">PHP</span>
+        </div>
+        <div class="text-gray-600">Server-side scripting with PHP: from basics to building dynamic web apps and connecting to databases.</div>
+      </div>
+      <!-- Graphic Design -->
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col gap-4 border border-gray-100 hover:shadow-lg transition">
+        <div class="flex items-center gap-3 text-pink-500 text-2xl">
+          <i class="fa-solid fa-pen-nib"></i>
+          <span class="font-bold text-lg">Graphic Design</span>
+        </div>
+        <div class="text-gray-600">Design principles, tools (Photoshop, Canva, Figma), branding, and creating stunning visuals for web and print.</div>
+      </div>
+      <!-- WhatsApp Bot Hosting -->
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col gap-4 border border-gray-100 hover:shadow-lg transition">
+        <div class="flex items-center gap-3 text-green-500 text-2xl">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span class="font-bold text-lg">WhatsApp Bot Hosting</span>
+        </div>
+        <div class="text-gray-600">How to build, deploy, and host WhatsApp bots using Node.js, Baileys, and cloud/VPS solutions.</div>
+      </div>
+      <!-- Tech Tips & Productivity -->
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col gap-4 border border-gray-100 hover:shadow-lg transition">
+        <div class="flex items-center gap-3 text-indigo-700 text-2xl">
+          <i class="fa-solid fa-lightbulb"></i>
+          <span class="font-bold text-lg">Tech Tips & Productivity</span>
+        </div>
+        <div class="text-gray-600">Short guides on troubleshooting, automation, digital security, remote work, and boosting your tech productivity.</div>
+      </div>
+      <!-- General Programming -->
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col gap-4 border border-gray-100 hover:shadow-lg transition">
+        <div class="flex items-center gap-3 text-cyan-600 text-2xl">
+          <i class="fa-solid fa-code"></i>
+          <span class="font-bold text-lg">General Programming</span>
+        </div>
+        <div class="text-gray-600">Concepts, best practices, and language-agnostic tips for writing clean, efficient, and maintainable code.</div>
+      </div>
+      <!-- Digital Marketing -->
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col gap-4 border border-gray-100 hover:shadow-lg transition">
+        <div class="flex items-center gap-3 text-orange-500 text-2xl">
+          <i class="fa-solid fa-bullhorn"></i>
+          <span class="font-bold text-lg">Digital Marketing</span>
+        </div>
+        <div class="text-gray-600">Learn about social media marketing, email campaigns, analytics, and strategies to grow your online presence.</div>
+      </div>
+      <!-- Cybersecurity Basics -->
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col gap-4 border border-gray-100 hover:shadow-lg transition">
+        <div class="flex items-center gap-3 text-red-600 text-2xl">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span class="font-bold text-lg">Cybersecurity Basics</span>
+        </div>
+        <div class="text-gray-600">Protect yourself and your business online: password management, phishing, malware, and safe browsing tips.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 mt-16">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8 text-sm text-gray-600">
+      <div>
+        <div class="text-xl font-bold text-indigo-900 mb-2 flex items-center gap-2"><i class="fa-solid fa-bolt text-indigo-700"></i> PETZEUSTECH</div>
+        <div class="mb-4 text-gray-500">“PETZEUSTECH – Using Tech to Solve Problems and Build Wealth”</div>
+        <div class="text-xs text-gray-400">&copy; 2025 Baifem Petuel Diang. All rights reserved.</div>
+      </div>
+      <div>
+        <div class="font-semibold mb-2 text-indigo-900">Links</div>
+        <ul class="space-y-1">
+          <li><a href="index.html" class="hover:text-indigo-700">Home</a></li>
+          <li><a href="about.html" class="hover:text-indigo-700">About</a></li>
+          <li><a href="skills.html" class="hover:text-indigo-700">Skills</a></li>
+          <li><a href="projects.html" class="hover:text-indigo-700">Projects</a></li>
+          <li><a href="services.html" class="hover:text-indigo-700">Services</a></li>
+          <li><a href="tutorials.html" class="hover:text-indigo-700">Tutorials</a></li>
+          <li><a href="contact.html" class="hover:text-indigo-700">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold mb-2 text-indigo-900">Contact</div>
+        <ul class="space-y-1">
+          <li><a href="mailto:baifempetuel0.2@gmail.com" class="hover:text-indigo-700"><i class="fa-solid fa-envelope mr-2"></i>Email</a></li>
+          <li><a href="tel:+237677251088" class="hover:text-indigo-700"><i class="fa-solid fa-phone mr-2"></i>+237 677 251 088</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold mb-2 text-indigo-900">Follow</div>
+        <div class="flex gap-4 mt-2">
+          <a href="https://wa.me/237677251088" target="_blank" title="WhatsApp" class="hover:text-green-500 text-2xl"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://web.facebook.com/baifem.petzeuskahlifa" target="_blank" title="Facebook" class="hover:text-blue-600 text-2xl"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://github.com/petuel01" target="_blank" title="GitHub" class="hover:text-gray-800 text-2xl"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+<style>
+  .active-link {
+    position: relative;
+    color: #4338ca !important;
+  }
+  .active-link::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: -2px;
+    height: 2px;
+    background: #6366f1;
+    border-radius: 1px;
+    width: 100%;
+    transition: width 0.2s;
+  }
+</style>
+
+<!-- Theme + Mobile menu behavior handled centrally in assets/js/script.js -->
+</body>
+</html>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="tutorials.html">Tutorials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="footer-social">
+            <a href="https://wa.me/237677251088" target="_blank" title="WhatsApp" class="footer-social-icon whatsapp"><img src="assets/img/whatsapp.svg" alt="WhatsApp"></a>
+            <a href="#" target="_blank" title="LinkedIn" class="footer-social-icon linkedin"><img src="assets/img/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://web.facebook.com/baifem.petzeuskahlifa" target="_blank" rel="noopener noreferrer" title="Facebook" class="footer-social-icon facebook"><img src="assets/img/facebook.svg" alt="Facebook"></a>
+            <a href="https://github.com/petuel01" target="_blank" rel="noopener noreferrer" title="GitHub" class="footer-social-icon github"><img src="assets/img/github.svg" alt="GitHub"></a>
+          </div>
+        </div>
+        <div class="footer-copy">&copy; 2025 Baifem Petuel Diang. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

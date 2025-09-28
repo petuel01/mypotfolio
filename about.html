@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | PETZEUSTECH</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Navbar -->
+  <header class="flex items-center justify-between px-6 py-4 border-b border-gray-200 relative bg-transparent">
+    <div class="flex items-center gap-2 font-bold text-gray-900">
+  <div class="w-7 h-7 border-2 border-purple-500 flex items-center justify-center text-purple-500 text-xs">P</div>
+  PETZEUSTECH
+    </div>
+
+    <nav class="hidden md:flex gap-6 text-sm items-center text-gray-700">
+      <a href="index.html" class="relative text-purple-600 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-purple-600 after:transition-all hover:after:w-full">#home</a>
+  <a href="projects.html" class="relative hover:text-purple-600 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-purple-600 after:transition-all hover:after:w-full">#projects</a>
+  <a href="skills.html" class="relative hover:text-purple-600 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-purple-600 after:transition-all hover:after:w-full">#skills</a>
+  <a href="about.html" class="relative hover:text-purple-600 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-purple-600 after:transition-all hover:after:w-full">#about-me</a>
+  <a href="services.html" class="relative hover:text-purple-600 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-purple-600 after:transition-all hover:after:w-full">#services</a>
+    <a href="contact.html" class="relative hover:text-purple-600 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-purple-600 after:transition-all hover:after:w-full">#contacts</a>
+      
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <button id="themeBtn" class="text-gray-700 focus:outline-none" title="Toggle theme">
+        <i id="themeIcon" class="fas fa-moon"></i>
+      </button>
+      <button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <nav id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-white border-t border-gray-200 flex-col gap-4 px-6 py-4 md:hidden">
+      <a href="index.html" class="hover:text-purple-600">#home</a>
+  <a href="projects.html" class="hover:text-purple-600">#projects</a>
+  <a href="skills.html" class="hover:text-purple-600">#skills</a>
+  <a href="about.html" class="hover:text-purple-600">#about-me</a>
+  <a href="services.html" class="hover:text-purple-600">#services</a>
+    <a href="contact.html" class="hover:text-purple-600">#contacts</a>
+      
+    </nav>
+  </header>
+
+  <!-- About Section (updated résumé-style) -->
+  <section class="max-w-5xl mx-auto px-4 py-16">
+    <div class="flex flex-col md:flex-row gap-8 items-start mb-8">
+      <div class="flex-shrink-0">
+  <img src="ppc.png" alt="Baifem Petuel Diang" class="w-40 h-40 md:w-48 md:h-48 rounded-xl profile-bottom-pill shadow-lg object-cover border-4 border-indigo-100" />
+      </div>
+      <div class="flex-1">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-indigo-900">BAIFEM PETUEL DIANG</h1>
+        <div class="text-lg text-gray-700 font-semibold mb-4">Full Stack Developer</div>
+        <hr class="my-4 border-gray-200">
+
+        <h2 class="text-xl font-semibold text-indigo-900 mt-2">PROFESSIONAL SUMMARY</h2>
+        <p class="text-gray-700 leading-relaxed mt-2">
+          Multi-skilled software engineer with 3 years of hands-on experience in full stack web development, specializing in PHP, Laravel, MySQL, and modern web technologies. Passionate about automation, backend systems, and solving real-world problems through innovative technology solutions. Proven expertise in CI/CD pipelines, server administration, bot development, and DevOps practices. Strong commitment to building robust systems, automating workflows, and empowering others through technology and education.
+        </p>
+
+        <hr class="my-4 border-gray-200">
+        <h2 class="text-xl font-semibold text-indigo-900">EDUCATION</h2>
+        <ul class="mt-2 list-disc ml-6 text-gray-700">
+          <li>Bachelor's Degree in Software Engineering | 2025 Landmark Metropolitan University Institute Buea</li>
+          <li>Higher National Diploma (HND) in Software Engineering | 2024 Landmark Metropolitan University Institute Buea</li>
+          <li>Advanced Level Certificate | 2019 Harvard School Complex, Yaoundé</li>
+          <li>Ordinary Level Certificate | 2016 ASEC Foundation, Yaoundé</li>
+          <li>First School Leaving Certificate | 2011 GBHS Baingeh</li>
+        </ul>
+
+        <hr class="my-4 border-gray-200">
+        <h2 class="text-xl font-semibold text-indigo-900">TECHNICAL SKILLS</h2>
+        <ul class="mt-2 list-none grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-700">
+          <li>• Backend Development: PHP, Laravel, MySQL</li>
+          <li>• Frontend Technologies: HTML, CSS, JavaScript, react</li>
+          <li>• Content Management: WordPress</li>
+          <li>• Mobile Development: Flutter</li>
+          <li>• DevOps & Automation: Jenkins, Maven, Tomcat, Nginx</li>
+          <li>• System Administration: Ubuntu, VPS, Bash Shell Scripting</li>
+          <li>• Digital Marketing: SEO, Blogging, Hosting Automation</li>
+          <li>• Specialized Development: WhatsApp Bots & Automation</li>
+          <li>• Data Analysis: Python</li>
+          <li>• Version Control & CI/CD: Git, Github, Jenkins Pipeline Management</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold text-indigo-900 mb-3">WORK EXPERIENCE</h2>
+      <div class="space-y-4 text-gray-700">
+        <div>
+          <div class="font-semibold">Full Stack Developer | 2022 – Presently</div>
+          <div class="text-sm text-gray-600 mb-2">Self-Employed / Freelance</div>
+          <ul class="list-disc ml-6">
+            <li>Developed and maintained web applications using PHP, HTML, CSS, JavaScript, Bootstrap and MySQL.</li>
+            <li>Implemented responsive web designs and optimized user experiences across multiple devices.</li>
+            <li>Created automated hosting solutions and SEO-optimized content management systems.</li>
+            <li>Built custom websites for client-specific requirements.</li>
+            <li>Designed and deployed database schemas with MySQL for efficient data management.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="font-semibold">DevOps Trainee | 2024</div>
+          <div class="text-sm text-gray-600 mb-2">Landmark Technologies</div>
+          <ul class="list-disc ml-6">
+            <li>Gained hands-on experience with CI/CD pipelines using Jenkins and Maven.</li>
+            <li>Configured and managed server environments using Tomcat and Nginx.</li>
+            <li>Developed automation scripts using Bash Shell Scripting for system administration.</li>
+            <li>Worked with Ubuntu VPS environments for application deployment and maintenance.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold text-indigo-900 mb-3">PROJECTS</h2>
+      <ul class="list-disc ml-6 text-gray-700">
+        <li>Orientation Web Application for University Students (PHP, MySQL)</li>
+        <li>ZEUSHOSTING: Multi-user WordPress Hosting System</li>
+        <li>WhatsApp QR Bot Authentication and Automation</li>
+        <li>Smart Agriculture IoT System</li>
+        <li>V2Ray VPN Deployment (TLS + WebSocket)</li>
+        <li>Inventory and E-commerce Web Apps</li>
+      </ul>
+    </div>
+
+    <div class="mb-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h2 class="text-2xl font-semibold text-indigo-900 mb-3">Languages</h2>
+        <ul class="list-disc ml-6 text-gray-700">
+          <li>English</li>
+          <li>French</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-2xl font-semibold text-indigo-900 mb-3">Hobbies</h2>
+        <ul class="list-disc ml-6 text-gray-700">
+          <li>Coding and teaching</li>
+          <li>Laptop/Phone repairs, firmware flashing</li>
+          <li>Exploring new tech</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold text-indigo-900 mb-3">References</h2>
+      <p class="text-gray-700">Mr Kah Kissinger<br/>Director – Landmark Technologies</p>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 mt-16">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8 text-sm text-gray-600">
+      <div>
+        <div class="text-xl font-bold text-indigo-900 mb-2 flex items-center gap-2"><i class="fa-solid fa-bolt text-indigo-700"></i> PETZEUSTECH</div>
+        <div class="mb-4 text-gray-500">“PETZEUSTECH – Using Tech to Solve Problems and Build Wealth”</div>
+        <div class="text-xs text-gray-400">&copy; 2025 Baifem Petuel Diang. All rights reserved.</div>
+      </div>
+      <div>
+        <div class="font-semibold mb-2 text-indigo-900">Links</div>
+        <ul class="space-y-1">
+          <li><a href="index.html" class="hover:text-indigo-700">Home</a></li>
+          <li><a href="about.html" class="hover:text-indigo-700">About</a></li>
+          <li><a href="skills.html" class="hover:text-indigo-700">Skills</a></li>
+          <li><a href="projects.html" class="hover:text-indigo-700">Projects</a></li>
+          <li><a href="services.html" class="hover:text-indigo-700">Services</a></li>
+          <li><a href="tutorials.html" class="hover:text-indigo-700">Tutorials</a></li>
+          <li><a href="contact.html" class="hover:text-indigo-700">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold mb-2 text-indigo-900">Contact</div>
+        <ul class="space-y-1">
+          <li><a href="mailto:baifempetuel0.2@gmail.com" class="hover:text-indigo-700"><i class="fa-solid fa-envelope mr-2"></i>Email</a></li>
+          <li><a href="tel:+237677251088" class="hover:text-indigo-700"><i class="fa-solid fa-phone mr-2"></i>+237 677 251 088</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold mb-2 text-indigo-900">Follow</div>
+        <div class="flex gap-4 mt-2">
+          <a href="https://wa.me/237677251088" target="_blank" title="WhatsApp" class="hover:text-green-500 text-2xl"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://web.facebook.com/baifem.petzeuskahlifa" target="_blank" title="Facebook" class="hover:text-blue-600 text-2xl" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://github.com/petuel01" target="_blank" title="GitHub" class="hover:text-gray-800 text-2xl" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+<style>
+  .active-link {
+    position: relative;
+    color: #4338ca !important;
+  }
+  .active-link::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: -2px;
+    height: 2px;
+    background: #6366f1;
+    border-radius: 1px;
+    width: 100%;
+    transition: width 0.2s;
+  }
+</style>
+<!-- Active link detection, mobile menu and theme handled centrally in assets/js/script.js -->
+</body>
+</html>
