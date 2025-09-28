@@ -95,18 +95,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const linkFile = (resolved.pathname.split('/').pop() || 'index.html').toLowerCase();
 
         // If this is a fragment-only link (href starts with '#')
+        // Only mark fragment links active when they point to the same page
+        // and the hash exactly matches the current URL's hash. This avoids
+        // treating generic '#' home anchors as active on other pages.
         if (raw.startsWith('#')) {
-          // Only consider in-page fragments when on index (home) or when pathname matches
-          if (linkFile === currentFile) {
-            // If hash matches current hash or common home anchors, mark active
-            const hash = resolved.hash || '#';
-            const currentHash = currentUrl.hash || '#';
-            const treatHome = ['#', '#home', '#top'].includes(hash.toLowerCase());
-            if (hash.toLowerCase() === currentHash.toLowerCase() || (treatHome && (currentHash === '#' || currentHash === '' || currentFile === 'index.html'))) {
-              link.classList.add('active-link');
-              link.setAttribute('aria-current', 'page');
-              return;
-            }
+          // resolved.pathname will be the current page when using new URL('#', currentUrl)
+          // Ensure the link targets the same pathname and the hash matches exactly.
+          if (resolved.pathname === currentUrl.pathname && resolved.hash && resolved.hash === currentUrl.hash) {
+            link.classList.add('active-link');
+            link.setAttribute('aria-current', 'page');
+            return;
           }
           link.classList.remove('active-link');
           link.removeAttribute('aria-current');
